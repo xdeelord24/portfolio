@@ -9,14 +9,20 @@
   <meta property="og:title" content="Jundee Mark G. Molina — Full Stack Developer / AI Engineer" />
   <meta property="og:description" content="Health information systems, AI agents and business tooling. MSc Computer Science. Manila, Philippines." />
   <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://jundee-molina.netlify.app/" />
+  <meta property="og:image" content="https://jundee-molina.netlify.app/assets/projects/nushed-studio.png" />
+  <meta property="og:image:alt" content="NuShed Site Studio showing an example shed in its 3D planning workspace" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <link rel="canonical" href="https://jundee-molina.netlify.app/" />
   <meta name="theme-color" content="#0b1020" />
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="styles.css?v=20261013" />
 </head>
 <body>
+  <a class="skip-link" href="#top">Skip to content</a>
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="bg-glow bg-glow-a" aria-hidden="true"></div>
   <div class="bg-glow bg-glow-b" aria-hidden="true"></div>
@@ -24,6 +30,7 @@
   <header class="nav">
     <a class="brand" href="#top"><span class="brand-mark">&lt;/&gt;</span> jundee.dev</a>
     <nav class="nav-links" id="nav-links">
+      <a href="#showcase">Gallery</a>
       <a href="#about">About</a>
       <a href="#experience">Experience</a>
       <a href="#projects">Projects</a>
@@ -31,7 +38,7 @@
       <a href="#opensource">Open Source</a>
       <a href="#contact" class="btn btn-sm">Contact</a>
     </nav>
-    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
       <span></span><span></span><span></span>
     </button>
   </header>
@@ -39,14 +46,13 @@
   <main id="top">
     <!-- HERO -->
     <section class="hero container">
+      <div class="hero-copy">
       <p class="eyebrow reveal">Hello, I'm</p>
       <h1 class="reveal">Jundee Mark G. Molina<span class="accent">.</span></h1>
       <h2 class="hero-sub reveal">Full Stack Developer <span class="sep">/</span> AI Engineer</h2>
       <p class="hero-lead reveal">
-        I build <strong>health information systems</strong>, <strong>AI agents</strong> and
-        <strong>business tooling</strong> that people actually rely on — from a national nutrition
-        information system serving field workers across the Philippines, to costing and operations
-        platforms for a New Zealand engineering group, to my own AI-agent workspace.
+        I build <strong>health information systems</strong>, <strong>AI-assisted workspaces</strong> and
+        <strong>business applications</strong> — from field data collection to quoting and everyday operations.
       </p>
       <div class="hero-meta reveal">
         <span class="chip">📍 Manila, Philippines</span>
@@ -55,16 +61,53 @@
         <span class="chip">🇳🇿 Numat Group</span>
       </div>
       <div class="hero-cta reveal">
-        <a class="btn btn-primary" href="#projects">View projects</a>
+        <a class="btn btn-primary" href="#showcase">Explore my work <span aria-hidden="true">↗</span></a>
         <a class="btn" href="https://github.com/xdeelord24" target="_blank" rel="noopener">GitHub ↗</a>
         <a class="btn btn-ghost" href="mailto:jgmolinawork@gmail.com">Email me</a>
       </div>
       <div class="hero-stats reveal">
-        <div><strong id="stat-repos">70+</strong><span>repositories</span></div>
+        <div><strong id="stat-repos">—</strong><span id="stat-repos-label">public repositories</span></div>
         <div><strong>5+</strong><span>years building</span></div>
         <div><strong>2</strong><span>countries served</span></div>
         <div><strong>1</strong><span>national health system</span></div>
       </div>
+      </div>
+      <aside class="hero-preview reveal" aria-label="Featured project preview">
+        <div class="preview-heading"><span class="preview-dot" aria-hidden="true"></span> Built to make work visible</div>
+        <a href="#showcase" class="hero-screen" aria-label="Explore the NuShed and AR Generator screenshot gallery">
+          <img src="assets/projects/nushed-studio.png" width="1440" height="1175" alt="NuShed Site Studio with a 3D example shed, dimensions and finish controls" fetchpriority="high" />
+        </a>
+        <div class="preview-caption"><div><strong>NuShed Site Studio</strong><span>From a shed calculation to a 3D view.</span></div><a href="#showcase" aria-label="View project gallery">View gallery <span aria-hidden="true">↗</span></a></div>
+      </aside>
+    </section>
+
+    <!-- REAL APPLICATION SCREENSHOTS -->
+    <section id="showcase" class="container section showcase" aria-labelledby="showcase-title">
+      <div class="showcase-heading reveal">
+        <div><p class="eyebrow">Inside the projects</p><h2 id="showcase-title">Systems you can see.</h2></div>
+        <p>Real application screens, captured with sample data. Select a screen to explore the details.</p>
+      </div>
+      <div class="showcase-grid">
+        <article class="showcase-project reveal">
+          <header class="showcase-project-head"><span class="project-index">01 / Applied AI</span><span class="sample-label">Demo workspace</span></header>
+          <a class="screenshot-link showcase-cover" href="assets/projects/ar-generator-today.png" data-gallery="ar-gen" data-title="AR Generator · Assistant dashboard" data-caption="The Today view brings priorities and task reminders together. Actual application components shown with synthetic sample tasks." aria-label="Enlarge AR Generator assistant dashboard screenshot">
+            <img src="assets/projects/ar-generator-today.png" width="1440" height="1000" loading="lazy" decoding="async" alt="AR Generator Today view with an assistant desk, overdue and due-today cards, and sample tasks" />
+            <span class="screen-action" aria-hidden="true">View screen ↗</span>
+          </a>
+          <div class="showcase-details"><h3>AR Generator</h3><p>A task and knowledge workspace that connects everyday work with AI-assisted workflows.</p><ul class="tech"><li>React</li><li>TypeScript</li><li>AI agents</li><li>Node.js</li></ul></div>
+          <div class="screen-strip"><span class="screen-strip-label">Also explore</span><a class="screenshot-link screen-thumb" href="assets/projects/ar-generator-my-work.png" data-gallery="ar-gen" data-title="AR Generator · My Work" data-caption="The My Work view combines tasks, an agenda and time tracking. Captured from the application with synthetic sample data."><img src="assets/projects/ar-generator-my-work.png" width="1440" height="1000" loading="lazy" decoding="async" alt="AR Generator My Work task list, agenda and time tracking with sample tasks" /><span>Tasks &amp; agenda <span aria-hidden="true">↗</span></span></a></div>
+        </article>
+        <article class="showcase-project reveal">
+          <header class="showcase-project-head"><span class="project-index">02 / Business tools</span><span class="sample-label">Example design</span></header>
+          <a class="screenshot-link showcase-cover" href="assets/projects/nushed-studio.png" data-gallery="nushed" data-title="NuShed · 3D Site Studio" data-caption="An example shed calculation displayed as an interactive 3D model, with dimension, finish and model-layer controls. Concept visualization." aria-label="Enlarge NuShed 3D studio screenshot">
+            <img src="assets/projects/nushed-studio.png" width="1440" height="1175" loading="lazy" decoding="async" alt="NuShed Site Studio displaying a four-bay example shed in 3D with dimensions and color controls" />
+            <span class="screen-action" aria-hidden="true">View screen ↗</span>
+          </a>
+          <div class="showcase-details"><h3>NuShed Site Studio</h3><p>A visual planning workspace connecting shed calculations, layouts and concept drawing sheets.</p><ul class="tech"><li>React</li><li>Three.js</li><li>MapLibre</li><li>PDF export</li></ul></div>
+          <div class="screen-strip"><span class="screen-strip-label">Also explore</span><a class="screenshot-link screen-thumb" href="assets/projects/nushed-layout.png" data-gallery="nushed" data-title="NuShed · Layout editor" data-caption="Bay and accessory positions alongside the 3D model, using the app's demonstration layout."><img src="assets/projects/nushed-layout.png" width="1440" height="1175" loading="lazy" decoding="async" alt="NuShed layout editor showing demonstration bay positions and an updated 3D model" /><span>Layout editor <span aria-hidden="true">↗</span></span></a><a class="screenshot-link screen-thumb" href="assets/projects/nushed-drawings.png" data-gallery="nushed" data-title="NuShed · Plans and elevations" data-caption="The drawing workspace produces concept floor plans and elevations with PDF, SVG and schedule exports. Sample design; concept drawings are not for construction."><img src="assets/projects/nushed-drawings.png" width="1440" height="1607" loading="lazy" decoding="async" alt="NuShed concept floor-plan sheet and drawing export controls for a demonstration layout" /><span>Drawing sheets <span aria-hidden="true">↗</span></span></a></div>
+        </article>
+      </div>
+      <p class="showcase-footnote">Want the technical story? <a href="#projects">Explore the full project list <span aria-hidden="true">↓</span></a></p>
     </section>
 
     <!-- ABOUT -->
@@ -162,12 +205,12 @@
     <!-- PROJECTS -->
     <section id="projects" class="container section">
       <h2 class="section-title reveal"><span class="num">03.</span> Selected projects</h2>
-      <div class="filters reveal" role="tablist">
-        <button class="filter active" data-filter="all">All</button>
-        <button class="filter" data-filter="health">Health systems</button>
-        <button class="filter" data-filter="business">Business &amp; client</button>
-        <button class="filter" data-filter="ai">AI &amp; agents</button>
-        <button class="filter" data-filter="personal">Personal &amp; OSS</button>
+      <div class="filters reveal" role="group" aria-label="Filter projects">
+        <button class="filter active" data-filter="all" aria-pressed="true">All</button>
+        <button class="filter" data-filter="health" aria-pressed="false">Health systems</button>
+        <button class="filter" data-filter="business" aria-pressed="false">Business &amp; client</button>
+        <button class="filter" data-filter="ai" aria-pressed="false">AI &amp; agents</button>
+        <button class="filter" data-filter="personal" aria-pressed="false">Personal &amp; OSS</button>
       </div>
 
       <div class="projects-grid">
@@ -279,11 +322,11 @@
         </div>
         <div class="skill-group reveal">
           <h3>AI &amp; ML</h3>
-          <ul><li>LLM agents &amp; tool use (Claude, OpenAI)</li><li>Prompt/eval engineering</li><li>TensorFlow · PyTorch</li><li>YOLOv5 · OpenCV</li><li>pandas · NumPy · Jupyter</li><li>Whisper / TTS pipelines</li></ul>
+          <ul><li>LLM agents &amp; tool use (Claude, OpenAI, Gemini)</li><li>Prompt &amp; context engineering</li><li>MCP · persistent agent memory</li><li>Ollama · local inference</li><li>TensorFlow · PyTorch · OpenCV</li><li>Whisper / TTS pipelines</li></ul>
         </div>
         <div class="skill-group reveal">
           <h3>Cloud &amp; DevOps</h3>
-          <ul><li>Netlify · Vercel</li><li>Google Cloud Platform</li><li>Linux servers · Nginx</li><li>GitHub · CI/CD</li><li>Playwright QA automation</li><li>Docker basics</li></ul>
+          <ul><li>Netlify · Render · Vercel</li><li>Google Cloud Platform</li><li>Linux servers · Nginx</li><li>GitHub · CI/CD</li><li>Playwright QA automation</li><li>Docker basics</li></ul>
         </div>
         <div class="skill-group reveal">
           <h3>Integrations</h3>
@@ -309,14 +352,22 @@
       <div class="contact-links reveal">
         <a class="btn btn-primary" href="mailto:jgmolinawork@gmail.com">jgmolinawork@gmail.com</a>
         <a class="btn" href="https://github.com/xdeelord24" target="_blank" rel="noopener">GitHub ↗</a>
+        <a class="btn" href="https://www.linkedin.com/in/jundee-mark-gerona-molina-293b83260/" target="_blank" rel="noopener">LinkedIn ↗</a>
       </div>
     </section>
   </main>
+
+  <dialog id="screenshot-dialog" class="screenshot-dialog" aria-labelledby="screenshot-title" aria-describedby="screenshot-caption">
+    <div class="viewer-header"><div><span class="viewer-eyebrow">Project gallery</span><h2 id="screenshot-title">Project screenshot</h2></div><button type="button" id="screenshot-close" class="viewer-button" aria-label="Close screenshot viewer" autofocus>Close <span aria-hidden="true">×</span></button></div>
+    <div class="viewer-image-wrap"><img id="screenshot-image" alt="" /></div>
+    <div class="viewer-footer"><div><p id="screenshot-caption"></p><a id="screenshot-original" href="assets/projects/nushed-studio.png" target="_blank" rel="noopener">Open full-size image <span aria-hidden="true">↗</span></a></div><div class="viewer-controls"><button type="button" id="screenshot-prev" class="viewer-button" aria-label="Previous screenshot">←</button><span id="screenshot-counter">1 / 1</span><button type="button" id="screenshot-next" class="viewer-button" aria-label="Next screenshot">→</button></div></div>
+    <p id="screenshot-status" class="sr-only" role="status" aria-live="polite"></p>
+  </dialog>
 
   <footer class="footer container">
     <p>© <span id="year"></span> Jundee Mark G. Molina · Built with plain HTML, CSS &amp; JS · Deployed on Netlify from GitHub.</p>
   </footer>
 
-  <script src="script.js" defer></script>
+  <script src="script.js?v=20261013" defer></script>
 </body>
 </html>
